@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>First Server - Riddlet Docs</title>
+        <title>Object Refrence - Riddlet Docs</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -56,16 +56,16 @@
     <a href="../install/">Server Installation</a>
 </li>
                             
-<li class="active">
-    <a href="./">First Server</a>
+<li >
+    <a href="../start/">First Server</a>
 </li>
                             
 <li >
     <a href="../adapters/">Creating an adapter</a>
 </li>
                             
-<li >
-    <a href="../object-refrence/">Object Refrence</a>
+<li class="active">
+    <a href="./">Object Refrence</a>
 </li>
                         </ul>
                     </li>
@@ -87,12 +87,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../install/">
+                        <a rel="next" href="../adapters/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../adapters/">
+                        <a rel="prev" href="../client-commands/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -104,34 +104,67 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#your-first-riddlet-server">Your first Riddlet Server</a></li>
-            <li><a href="#standalone">Standalone</a></li>
-            <li><a href="#custom-https-server">Custom HTTP/S server</a></li>
+        <li class="main active"><a href="#object-refrence">Object Refrence</a></li>
+            <li><a href="#socketio-objects">Socket.io objects</a></li>
+            <li><a href="#message-object">message Object</a></li>
+            <li><a href="#serverinfo-object">serverInfo Object</a></li>
+            <li><a href="#user-object">user Object</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="your-first-riddlet-server">Your first Riddlet Server</h1>
-<h2 id="standalone">Standalone</h2>
-<p>Starting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.</p>
-<pre><code class="js">var riddlet = require(&quot;riddlet-server&quot;).Riddlet()
+<h1 id="object-refrence">Object Refrence</h1>
+<h2 id="socketio-objects">Socket.io objects</h2>
+<p>The socket.io objects <code>io</code> and <code>socket</code> are mostly unmodified from their original socket.io object. You can find information on these objects on the <a href="https://socket.io/docs/server-api/">socket.io docs</a></p>
+<h2 id="message-object"><code>message</code> Object</h2>
+<p>Message objects are the go-to for any socket transmission that isn't already custom defined.</p>
+<p>Example <code>messsage</code> object:</p>
+<pre><code class="json">{
+  &quot;data&quot;:&quot;hello&quot;,
+  &quot;id&quot;:&quot;152255174502021051&quot;,
+  &quot;room&quot;:&quot;#default&quot;,
+  &quot;client&quot;:&quot;username15chars&quot;,
+  &quot;color&quot;:&quot;coral&quot;
+}
 </code></pre>
 
-<p>Then in your terminal, run <code>node server.js</code> and Riddlet will run on either your <code>port</code> environment variable or port 8000.</p>
-<h2 id="custom-https-server">Custom HTTP/S server</h2>
-<p>If you want to attach it to an already existing HTTP server, just attach it.</p>
-<pre><code class="js">var http = require('http');
-
-app = http.createServer();
-
-var riddlet = require(&quot;riddlet-server&quot;).Riddlet(app)
-
-const port = process.env.port || 8080;
-app.listen(port);
-console.log(&quot;http listening on port &quot;, port);
+<p><code>data</code>: The message data. Plain text message is usually what the user typed in.</p>
+<p><code>id</code>: Custom ID of message based on UNIX timestamp plus some extra numbers added for good measure</p>
+<p><code>room</code>: The room the message is supposed to go to.</p>
+<p><code>client</code>: The client's custom name.</p>
+<p><code>color</code>: The user's color (used for the text 'Anonymous' on the web app)</p>
+<h2 id="serverinfo-object"><code>serverInfo</code> Object</h2>
+<p>This object is sent time a user connects to the server.</p>
+<p>Example <code>serverInfo</code> object:</p>
+<pre><code class="json">{
+  &quot;title&quot;: &quot;Meade DrJava Technical Support Live Grade&quot;,
+  &quot;rooms&quot;: [&quot;/&quot;],
+  &quot;maxcharlen&quot;: 500,
+  &quot;ip&quot;: &quot;123.456.789.0&quot;,
+  &quot;isMod&quot;:false,
+  &quot;logo&quot;:&quot;https://example.com/logo.png&quot;,
+  &quot;version&quot;:11
+}
 </code></pre>
 
-<p>Make sure that the current directory of your <code>js</code> file can be written to and read from. This is necessary for any version above <code>v0.10.6</code></p></div>
+<p><code>version</code>: The minimum client version to use the server.
+<code>title</code>: The server's name
+<code>rooms</code>: The namespace (for socket.io)
+<code>maxcharlen</code>: The maximum characters that can be in a message
+<code>ip</code>: The public IP of the server
+<code>isMod</code>: True if the server uses adapters
+<code>logo</code>: The logo of the server</p>
+<h2 id="user-object"><code>user</code> Object</h2>
+<p>This contains all of the user's information necessary for viewing messages.</p>
+<p>Example <code>user</code> object:</p>
+<pre><code class="json">{
+  &quot;name&quot;: &quot;92wM66tMWxd6l0I&quot;,
+  &quot;color&quot;: &quot;purple&quot;
+}
+</code></pre>
+
+<p><code>name</code>: Equivalent of the <code>client</code> variable in a message object.</p>
+<p><code>color</code>: Equivalent of the <code>color</code> variable in a message object.</p></div>
         </div>
 
         <footer class="col-md-12">
