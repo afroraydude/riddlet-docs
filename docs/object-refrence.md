@@ -38,7 +38,7 @@ Example `serverInfo` object:
 
 ```json
 {
-  "title": "Meade DrJava Technical Support Live Grade",
+  "title": "Test Server",
   "rooms": ["/"],
   "maxcharlen": 500,
   "ip": "123.456.789.0",
