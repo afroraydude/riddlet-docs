@@ -1,0 +1,11 @@
+site_name: Riddlet Docs
+pages:
+  - Home: index.md
+  - Client:
+    - Commands: client-commands.md
+  - Server:
+    - Server Installation: install.md
+    - First Server: start.md
+    - Creating an adapter: adapters.md
+theme: 
+  name: 'yeti'
