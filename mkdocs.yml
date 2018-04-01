@@ -1,11 +1,12 @@
 site_name: Riddlet Docs
 pages:
   - Home: index.md
-  - Client:
-    - Commands: client-commands.md
   - Server:
     - Server Installation: install.md
     - First Server: start.md
     - Creating an adapter: adapters.md
+    - Object Refrence: object-refrence.md
+  - Client:
+    - Commands: client-commands.md
 theme: 
   name: 'yeti'

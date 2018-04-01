@@ -1,5 +1,7 @@
 # Your first Riddlet Server
 
+## Standalone
+
 Starting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.
 
 ```js
@@ -7,6 +9,8 @@ var riddlet = require("riddlet-server").Riddlet()
 ```
 
 Then in your terminal, run `node server.js` and Riddlet will run on either your `port` environment variable or port 8000.
+
+## Custom HTTP/S server
 
 If you want to attach it to an already existing HTTP server, just attach it.
 
