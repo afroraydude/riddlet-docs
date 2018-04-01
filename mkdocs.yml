@@ -4,6 +4,7 @@ pages:
   - Server:
     - Server Installation: install.md
     - First Server: start.md
+    - Configuration: config.md
     - Creating an adapter: adapters.md
     - Object Refrence: object-refrence.md
   - Client:
