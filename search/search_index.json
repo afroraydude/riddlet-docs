@@ -46,6 +46,21 @@
             "title": "Custom HTTP/S server"
         },
         {
+            "location": "/config/",
+            "text": "Configuration\n\n\nRiddlet handles custom configurations through environment variables. \n\n\nConfiguration Parameters\n\n\njwtcode\n: The passcode used for signing JWT tokens. Set this if you don't want users to get new tokens on each server reboot (default: 15)\n\n\nriddlettitle\n: The title of the server, used in the \"Join Server\" window of the client apps (default: Test Server)\n\n\nmaxcharlen\n: The maximum amount of characters allowed in a message (after decryption) (default: 500)\n\n\nlogo\n: The server's logo, used in the \"Join Server\" window of the client apps (default: https://d30y9cdsu7xlg0.cloudfront.net/png/29558-200.png)\n\n\nencrypt\n: Set this to anything but \"true\" if you want to disable OTR-like message handling (default: true)",
+            "title": "Configuration"
+        },
+        {
+            "location": "/config/#configuration",
+            "text": "Riddlet handles custom configurations through environment variables.",
+            "title": "Configuration"
+        },
+        {
+            "location": "/config/#configuration-parameters",
+            "text": "jwtcode : The passcode used for signing JWT tokens. Set this if you don't want users to get new tokens on each server reboot (default: 15)  riddlettitle : The title of the server, used in the \"Join Server\" window of the client apps (default: Test Server)  maxcharlen : The maximum amount of characters allowed in a message (after decryption) (default: 500)  logo : The server's logo, used in the \"Join Server\" window of the client apps (default: https://d30y9cdsu7xlg0.cloudfront.net/png/29558-200.png)  encrypt : Set this to anything but \"true\" if you want to disable OTR-like message handling (default: true)",
+            "title": "Configuration Parameters"
+        },
+        {
             "location": "/adapters/",
             "text": "Adapters\n\n\nWhat is an \"Adapter\"?\n\n\nAdapters are extensions for Riddlet Server. They can be objects with functions or classes with functions. Adapters allow you to handle messages on your own.\n\n\nThe functions of an Adapter\n\n\nAll adapter functions\n\n\nAll adapter functions recieve specific parameters. They are as follows:\n\n\n\n\nio\n: The inner socket.io object, use for anything with the server-side of message handling (sending messages, rooms, sockets) (object)\n\n\nsocket\n: The socket the message came from (object)\n\n\nmessage\n: The message in question (object)\n\n\nmessages\n: the last messages sent (array of \nmessage\n)\n\n\nserverInfo\n: The server's public info (object)\n\n\nuser\n: The user's token, decoded (object)\n\n\n\n\nbeforeMessage()\n\n\nThis is ran before the normal message handler is loaded. If you wanted to handle custom commands, socket attributes, or otherwise modify any of the parameters, you would do it in this function.\n\n\nafterMessage()\n\n\nThis is ran right after the default message handler. If you wanted to keep messages for long term storage, you would probably handle that within this function.",
             "title": "Creating an adapter"
