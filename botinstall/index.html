@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Server Installation - Riddlet Docs</title>
+        <title>Riddlet Bots - Riddlet Docs</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -48,12 +48,12 @@
                     <li >
                         <a href="..">Home</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Server <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
-<li class="active">
-    <a href="./">Server Installation</a>
+<li >
+    <a href="../install/">Server Installation</a>
 </li>
                             
 <li >
@@ -69,12 +69,12 @@
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
-<li >
-    <a href="../botinstall/">Riddlet Bots</a>
+<li class="active">
+    <a href="./">Riddlet Bots</a>
 </li>
                             
 <li >
@@ -94,12 +94,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="..">
+                        <a rel="next" href="../adapters/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../start/">
+                        <a rel="prev" href="../client-commands/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -111,18 +111,58 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#installation">Installation</a></li>
+        <li class="main active"><a href="#riddlet-bots">Riddlet Bots</a></li>
+            <li><a href="#installing-the-official-bot-library">Installing the official bot library</a></li>
+            <li><a href="#your-first-bot">Your first bot</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="installation">Installation</h1>
-<p>Installing <code>riddlet-server</code> is very simplistic.</p>
-<ol>
-<li>Download the latest version of Node.js and NPM</li>
-<li>Install a C++11 compiler. For linux, something like <code>make</code>. For Windows, <code>npm install -g windows-build-tools</code> should work.</li>
-<li>Run <code>npm install --save riddlet-server</code></li>
-</ol></div>
+<h1 id="riddlet-bots">Riddlet Bots</h1>
+<p>Riddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server. </p>
+<h2 id="installing-the-official-bot-library">Installing the official bot library</h2>
+<p>Installation is fairly simple. Just run <code>npm install --save riddlet-bot</code> in your project directory.</p>
+<h2 id="your-first-bot">Your first bot</h2>
+<p>The official bot library allows for very barebones bot creation.</p>
+<h3 id="simple-log-bot">Simple Log Bot</h3>
+<p>To create a bot, you first want to create a new <code>RiddletBot</code> class.</p>
+<pre><code class="js">var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;)
+</code></pre>
+
+<p>You should know if if this works when you get a token printed to your terminal. (ie: <code>xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz</code>)</p>
+<p>We now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.</p>
+<pre><code class="js">var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;, &quot;xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz&quot;)
+</code></pre>
+
+<p>Your bot should now log every message it recieves from the server. </p>
+<h3 id="custom-message-handler">Custom Message Handler</h3>
+<p>Now to create a custom Message Handler.</p>
+<p>Here is an example message handler that we will be using.</p>
+<pre><code class="js">var xMessageHandler = function (bot, message) {
+  if(message.data === &quot;!info&quot;) {
+    bot.SendMessage(&quot;test&quot;, &quot;#all&quot;)
+  }
+}
+</code></pre>
+
+<p>Lets go line by line as to each part of the Message Handler</p>
+<pre><code class="js">var xMessageHandler = function (bot, message)
+</code></pre>
+
+<p>This line defines the message handler. The <code>bot</code> parameter is the <code>RiddletBot</code> object that we defined. The <code>message</code> parameter is a <a href="../object-refrence/#message-object">message</a> object.</p>
+<pre><code class="js">if(message.data === &quot;!info&quot;)
+</code></pre>
+
+<p>This checks to see if the message's text is equal to "!info" (ie: the user sent the mesesage "!info")</p>
+<pre><code class="js">bot.SendMessage(&quot;test&quot;, &quot;#all&quot;)
+</code></pre>
+
+<p>This sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the <code>message</code> that you want to send (equivalent to <code>message.data</code>) and the second parameter is the room you want it to go. </p>
+<p>Now we want to import it into our bot.</p>
+<pre><code class="js">var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;, &quot;xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz&quot;, xMessageHandler)
+</code></pre>
+
+<p>And that's your first bot!</p></div>
         </div>
 
         <footer class="col-md-12">

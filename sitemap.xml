@@ -35,15 +35,15 @@
      <changefreq>daily</changefreq>
     </url>
         
-    <url>
-     <loc>/object-refrence/</loc>
-     <lastmod>2018-04-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
+        
+    <url>
+     <loc>/botinstall/</loc>
+     <lastmod>2018-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
      <loc>/client-commands/</loc>
@@ -51,6 +51,14 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>/object-refrence/</loc>
+     <lastmod>2018-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>

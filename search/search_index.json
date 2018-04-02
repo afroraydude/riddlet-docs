@@ -96,6 +96,46 @@
             "title": "afterMessage()"
         },
         {
+            "location": "/botinstall/",
+            "text": "Riddlet Bots\n\n\nRiddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server. \n\n\nInstalling the official bot library\n\n\nInstallation is fairly simple. Just run \nnpm install --save riddlet-bot\n in your project directory.\n\n\nYour first bot\n\n\nThe official bot library allows for very barebones bot creation.\n\n\nSimple Log Bot\n\n\nTo create a bot, you first want to create a new \nRiddletBot\n class.\n\n\nvar bot = new RiddletBot(\"https://talk.needformea.de\")\n\n\n\n\nYou should know if if this works when you get a token printed to your terminal. (ie: \nxxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\n)\n\n\nWe now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.\n\n\nvar bot = new RiddletBot(\"https://talk.needformea.de\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\")\n\n\n\n\nYour bot should now log every message it recieves from the server. \n\n\nCustom Message Handler\n\n\nNow to create a custom Message Handler.\n\n\nHere is an example message handler that we will be using.\n\n\nvar xMessageHandler = function (bot, message) {\n  if(message.data === \"!info\") {\n    bot.SendMessage(\"test\", \"#all\")\n  }\n}\n\n\n\n\nLets go line by line as to each part of the Message Handler\n\n\nvar xMessageHandler = function (bot, message)\n\n\n\n\nThis line defines the message handler. The \nbot\n parameter is the \nRiddletBot\n object that we defined. The \nmessage\n parameter is a \nmessage\n object.\n\n\nif(message.data === \"!info\")\n\n\n\n\nThis checks to see if the message's text is equal to \"!info\" (ie: the user sent the mesesage \"!info\")\n\n\nbot.SendMessage(\"test\", \"#all\")\n\n\n\n\nThis sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the \nmessage\n that you want to send (equivalent to \nmessage.data\n) and the second parameter is the room you want it to go. \n\n\nNow we want to import it into our bot.\n\n\nvar bot = new RiddletBot(\"https://talk.needformea.de\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\", xMessageHandler)\n\n\n\n\nAnd that's your first bot!",
+            "title": "Riddlet Bots"
+        },
+        {
+            "location": "/botinstall/#riddlet-bots",
+            "text": "Riddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server.",
+            "title": "Riddlet Bots"
+        },
+        {
+            "location": "/botinstall/#installing-the-official-bot-library",
+            "text": "Installation is fairly simple. Just run  npm install --save riddlet-bot  in your project directory.",
+            "title": "Installing the official bot library"
+        },
+        {
+            "location": "/botinstall/#your-first-bot",
+            "text": "The official bot library allows for very barebones bot creation.",
+            "title": "Your first bot"
+        },
+        {
+            "location": "/botinstall/#simple-log-bot",
+            "text": "To create a bot, you first want to create a new  RiddletBot  class.  var bot = new RiddletBot(\"https://talk.needformea.de\")  You should know if if this works when you get a token printed to your terminal. (ie:  xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz )  We now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.  var bot = new RiddletBot(\"https://talk.needformea.de\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\")  Your bot should now log every message it recieves from the server.",
+            "title": "Simple Log Bot"
+        },
+        {
+            "location": "/botinstall/#custom-message-handler",
+            "text": "Now to create a custom Message Handler.  Here is an example message handler that we will be using.  var xMessageHandler = function (bot, message) {\n  if(message.data === \"!info\") {\n    bot.SendMessage(\"test\", \"#all\")\n  }\n}  Lets go line by line as to each part of the Message Handler  var xMessageHandler = function (bot, message)  This line defines the message handler. The  bot  parameter is the  RiddletBot  object that we defined. The  message  parameter is a  message  object.  if(message.data === \"!info\")  This checks to see if the message's text is equal to \"!info\" (ie: the user sent the mesesage \"!info\")  bot.SendMessage(\"test\", \"#all\")  This sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the  message  that you want to send (equivalent to  message.data ) and the second parameter is the room you want it to go.   Now we want to import it into our bot.  var bot = new RiddletBot(\"https://talk.needformea.de\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\", xMessageHandler)  And that's your first bot!",
+            "title": "Custom Message Handler"
+        },
+        {
+            "location": "/client-commands/",
+            "text": "Client Commands\n\n\n/join <#channel>\n - Joins channel\n\n\n/leave <#channel>\n - Leaves channel (if already joined)\n\n\n/switch <#channel>\n - Switches to channel",
+            "title": "Web Client Commands"
+        },
+        {
+            "location": "/client-commands/#client-commands",
+            "text": "/join <#channel>  - Joins channel  /leave <#channel>  - Leaves channel (if already joined)  /switch <#channel>  - Switches to channel",
+            "title": "Client Commands"
+        },
+        {
             "location": "/object-refrence/",
             "text": "Object Refrence\n\n\nSocket.io objects\n\n\nThe socket.io objects \nio\n and \nsocket\n are mostly unmodified from their original socket.io object. You can find information on these objects on the \nsocket.io docs\n\n\nmessage\n Object\n\n\nMessage objects are the go-to for any socket transmission that isn't already custom defined.\n\n\nExample \nmesssage\n object:\n\n\n{\n  \"data\":\"hello\",\n  \"id\":\"152255174502021051\",\n  \"room\":\"#default\",\n  \"client\":\"username15chars\",\n  \"color\":\"coral\"\n}\n\n\n\n\ndata\n: The message data. Plain text message is usually what the user typed in.\n\n\nid\n: Custom ID of message based on UNIX timestamp plus some extra numbers added for good measure\n\n\nroom\n: The room the message is supposed to go to.\n\n\nclient\n: The client's custom name.\n\n\ncolor\n: The user's color (used for the text 'Anonymous' on the web app)\n\n\nserverInfo\n Object\n\n\nThis object is sent time a user connects to the server.\n\n\nExample \nserverInfo\n object:\n\n\n{\n  \"title\": \"Test Server\",\n  \"rooms\": [\"/\"],\n  \"maxcharlen\": 500,\n  \"ip\": \"123.456.789.0\",\n  \"isMod\":false,\n  \"logo\":\"https://example.com/logo.png\",\n  \"version\":11\n}\n\n\n\n\nversion\n: The minimum client version to use the server.\n\ntitle\n: The server's name\n\nrooms\n: The namespace (for socket.io)\n\nmaxcharlen\n: The maximum characters that can be in a message\n\nip\n: The public IP of the server\n\nisMod\n: True if the server uses adapters\n\nlogo\n: The logo of the server\n\n\nuser\n Object\n\n\nThis contains all of the user's information necessary for viewing messages.\n\n\nExample \nuser\n object:\n\n\n{\n  \"name\": \"92wM66tMWxd6l0I\",\n  \"color\": \"purple\"\n}\n\n\n\n\nname\n: Equivalent of the \nclient\n variable in a message object.\n\n\ncolor\n: Equivalent of the \ncolor\n variable in a message object.",
             "title": "Object Refrence"
@@ -124,16 +164,6 @@
             "location": "/object-refrence/#user-object",
             "text": "This contains all of the user's information necessary for viewing messages.  Example  user  object:  {\n  \"name\": \"92wM66tMWxd6l0I\",\n  \"color\": \"purple\"\n}  name : Equivalent of the  client  variable in a message object.  color : Equivalent of the  color  variable in a message object.",
             "title": "user Object"
-        },
-        {
-            "location": "/client-commands/",
-            "text": "Client Commands\n\n\n/join <#channel>\n - Joins channel\n\n\n/leave <#channel>\n - Leaves channel (if already joined)\n\n\n/switch <#channel>\n - Switches to channel",
-            "title": "Commands"
-        },
-        {
-            "location": "/client-commands/#client-commands",
-            "text": "/join <#channel>  - Joins channel  /leave <#channel>  - Leaves channel (if already joined)  /switch <#channel>  - Switches to channel",
-            "title": "Client Commands"
         }
     ]
 }
