@@ -15,6 +15,8 @@ The official bot library allows for very barebones bot creation.
 To create a bot, you first want to create a new `RiddletBot` class.
 
 ```js
+var RiddletBot = require('riddlet-bot').RiddletBot
+
 var bot = new RiddletBot("https://talk.needformea.de")
 ```
 
