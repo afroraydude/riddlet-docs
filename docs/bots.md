@@ -17,7 +17,7 @@ To create a bot, you first want to create a new `RiddletBot` class.
 ```js
 var RiddletBot = require('riddlet-bot').RiddletBot
 
-var bot = new RiddletBot("https://talk.needformea.de")
+var bot = new RiddletBot("http://chat.example.com")
 ```
 
 You should know if if this works when you get a token printed to your terminal. (ie: `xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz`)
@@ -25,7 +25,7 @@ You should know if if this works when you get a token printed to your terminal. 
 We now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.
 
 ```js
-var bot = new RiddletBot("https://talk.needformea.de", "xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz")
+var bot = new RiddletBot("http://chat.example.com", "xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz")
 ```
 
 Your bot should now log every message it recieves from the server. 
@@ -67,7 +67,7 @@ This sends a message, and does all necessary compatibility checks with the serve
 Now we want to import it into our bot.
 
 ```js
-var bot = new RiddletBot("https://talk.needformea.de", "xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz", xMessageHandler)
+var bot = new RiddletBot("http://chat.example.com", "xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz", xMessageHandler)
 ```
 
 And that's your first bot!

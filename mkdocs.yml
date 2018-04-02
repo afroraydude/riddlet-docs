@@ -7,7 +7,7 @@ pages:
     - Configuration: config.md
     - Creating an adapter: adapters.md
   - Clients: 
-    - Riddlet Bots: botinstall.md
+    - Riddlet Bots: bots.md
     - Web Client Commands: client-commands.md
   - Object Refrence: object-refrence.md
 theme: 
