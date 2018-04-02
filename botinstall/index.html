@@ -126,7 +126,9 @@
 <p>The official bot library allows for very barebones bot creation.</p>
 <h3 id="simple-log-bot">Simple Log Bot</h3>
 <p>To create a bot, you first want to create a new <code>RiddletBot</code> class.</p>
-<pre><code class="js">var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;)
+<pre><code class="js">var RiddletBot = require('riddlet-bot').RiddletBot
+
+var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;)
 </code></pre>
 
 <p>You should know if if this works when you get a token printed to your terminal. (ie: <code>xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz</code>)</p>
