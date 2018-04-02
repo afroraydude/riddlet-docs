@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,25 +13,25 @@
         
     <url>
      <loc>/install/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/start/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/config/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/adapters/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -40,14 +40,14 @@
     
         
     <url>
-     <loc>/botinstall/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <loc>/bots/</loc>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/client-commands/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -56,7 +56,7 @@
     
     <url>
      <loc>/object-refrence/</loc>
-     <lastmod>2018-04-01</lastmod>
+     <lastmod>2018-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

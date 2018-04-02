@@ -128,12 +128,12 @@
 <p>To create a bot, you first want to create a new <code>RiddletBot</code> class.</p>
 <pre><code class="js">var RiddletBot = require('riddlet-bot').RiddletBot
 
-var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;)
+var bot = new RiddletBot(&quot;http://chat.example.com&quot;)
 </code></pre>
 
 <p>You should know if if this works when you get a token printed to your terminal. (ie: <code>xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz</code>)</p>
 <p>We now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.</p>
-<pre><code class="js">var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;, &quot;xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz&quot;)
+<pre><code class="js">var bot = new RiddletBot(&quot;http://chat.example.com&quot;, &quot;xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz&quot;)
 </code></pre>
 
 <p>Your bot should now log every message it recieves from the server. </p>
@@ -161,7 +161,7 @@ var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;)
 
 <p>This sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the <code>message</code> that you want to send (equivalent to <code>message.data</code>) and the second parameter is the room you want it to go. </p>
 <p>Now we want to import it into our bot.</p>
-<pre><code class="js">var bot = new RiddletBot(&quot;https://talk.needformea.de&quot;, &quot;xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz&quot;, xMessageHandler)
+<pre><code class="js">var bot = new RiddletBot(&quot;http://chat.example.com&quot;, &quot;xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz&quot;, xMessageHandler)
 </code></pre>
 
 <p>And that's your first bot!</p></div>
