@@ -6,8 +6,9 @@ pages:
     - First Server: start.md
     - Configuration: config.md
     - Creating an adapter: adapters.md
-    - Object Refrence: object-refrence.md
-  - Client:
-    - Commands: client-commands.md
+  - Clients: 
+    - Riddlet Bots: botinstall.md
+    - Web Client Commands: client-commands.md
+  - Object Refrence: object-refrence.md
 theme: 
   name: 'yeti'
