@@ -131,7 +131,8 @@
   &quot;id&quot;:&quot;152255174502021051&quot;,
   &quot;room&quot;:&quot;#default&quot;,
   &quot;client&quot;:&quot;username15chars&quot;,
-  &quot;color&quot;:&quot;coral&quot;
+  &quot;color&quot;:&quot;coral&quot;,
+  &quot;nickname&quot;: &quot;john doe&quot;
 }
 </code></pre>
 
@@ -140,6 +141,7 @@
 <p><code>room</code>: The room the message is supposed to go to.</p>
 <p><code>client</code>: The client's custom name.</p>
 <p><code>color</code>: The user's color (used for the text 'Anonymous' on the web app)</p>
+<p><code>nickname</code>: The nickname chosen by the client</p>
 <h2 id="serverinfo-object"><code>serverInfo</code> Object</h2>
 <p>This object is sent time a user connects to the server.</p>
 <p>Example <code>serverInfo</code> object:</p>
@@ -150,28 +152,30 @@
   &quot;ip&quot;: &quot;123.456.789.0&quot;,
   &quot;isMod&quot;:false,
   &quot;logo&quot;:&quot;https://example.com/logo.png&quot;,
-  &quot;version&quot;:11
+  &quot;version&quot;:12.3
 }
 </code></pre>
 
-<p><code>version</code>: The minimum client version to use the server.
-<code>title</code>: The server's name
-<code>rooms</code>: The namespace (for socket.io)
-<code>maxcharlen</code>: The maximum characters that can be in a message
-<code>ip</code>: The public IP of the server
-<code>isMod</code>: True if the server uses adapters
-<code>logo</code>: The logo of the server</p>
+<p><code>version</code>: The minimum client version to use the server.</p>
+<p><code>title</code>: The server's name</p>
+<p><code>rooms</code>: The namespace (for socket.io)</p>
+<p><code>maxcharlen</code>: The maximum characters that can be in a message</p>
+<p><code>ip</code>: The public IP of the server</p>
+<p><code>isMod</code>: True if the server uses adapters</p>
+<p><code>logo</code>: The logo of the server</p>
 <h2 id="user-object"><code>user</code> Object</h2>
 <p>This contains all of the user's information necessary for viewing messages.</p>
 <p>Example <code>user</code> object:</p>
 <pre><code class="json">{
   &quot;name&quot;: &quot;92wM66tMWxd6l0I&quot;,
-  &quot;color&quot;: &quot;purple&quot;
+  &quot;color&quot;: &quot;purple&quot;,
+  &quot;nickname&quot;: &quot;john doe&quot;
 }
 </code></pre>
 
 <p><code>name</code>: Equivalent of the <code>client</code> variable in a message object.</p>
-<p><code>color</code>: Equivalent of the <code>color</code> variable in a message object.</p></div>
+<p><code>color</code>: Equivalent of the <code>color</code> variable in a message object.</p>
+<p><code>nickname</code>: The nickname chosen by the client</p></div>
         </div>
 
         <footer class="col-md-12">
