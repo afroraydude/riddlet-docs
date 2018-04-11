@@ -16,7 +16,8 @@ Example `messsage` object:
   "id":"152255174502021051",
   "room":"#default",
   "client":"username15chars",
-  "color":"coral"
+  "color":"coral",
+  "nickname": "john doe"
 }
 ```
 
@@ -29,6 +30,8 @@ Example `messsage` object:
 `client`: The client's custom name.
 
 `color`: The user's color (used for the text 'Anonymous' on the web app)
+
+`nickname`: The nickname chosen by the client
 
 ## `serverInfo` Object
 
@@ -44,16 +47,22 @@ Example `serverInfo` object:
   "ip": "123.456.789.0",
   "isMod":false,
   "logo":"https://example.com/logo.png",
-  "version":11
+  "version":12.3
 }
 ```
 
 `version`: The minimum client version to use the server.
+
 `title`: The server's name
+
 `rooms`: The namespace (for socket.io)
+
 `maxcharlen`: The maximum characters that can be in a message
+
 `ip`: The public IP of the server
+
 `isMod`: True if the server uses adapters
+
 `logo`: The logo of the server
 
 ## `user` Object
@@ -65,10 +74,13 @@ Example `user` object:
 ```json
 {
   "name": "92wM66tMWxd6l0I",
-  "color": "purple"
+  "color": "purple",
+  "nickname": "john doe"
 }
 ```
 
 `name`: Equivalent of the `client` variable in a message object.
 
 `color`: Equivalent of the `color` variable in a message object.
+
+`nickname`: The nickname chosen by the client
