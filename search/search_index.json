@@ -127,12 +127,12 @@
         },
         {
             "location": "/client-commands/",
-            "text": "Client Commands\n\n\n/join <#channel>\n - Joins channel\n\n\n/leave <#channel>\n - Leaves channel (if already joined)\n\n\n/switch <#channel>\n - Switches to channel\n\n\n/reset\n - Resets server token and relogins to the server\n\n\n/newkeys\n - Resets the RSA keypair (\nNote:\n This command does not take in effect of multiple server connections and might actually break other server connections)\n\n\n/nick <nickname>\n - Sets a nickname.",
+            "text": "Client Commands\n\n\n/join <#channel>\n - Joins channel\n\n\n/leave <#channel>\n - Leaves channel (if already joined)\n\n\n/switch <#channel>\n - Switches to channel\n\n\n/reset\n - Resets server token and relogins to the server\n\n\n/newkeys\n - Resets the RSA keypair (\nNote:\n This command does not take in effect of multiple server connections and might actually break other server connections)\n\n\n/nick <nickname>\n - Sets a nickname.\n\n\n/whisper <user id> <message>\n - Sends a private message",
             "title": "Web Client Commands"
         },
         {
             "location": "/client-commands/#client-commands",
-            "text": "/join <#channel>  - Joins channel  /leave <#channel>  - Leaves channel (if already joined)  /switch <#channel>  - Switches to channel  /reset  - Resets server token and relogins to the server  /newkeys  - Resets the RSA keypair ( Note:  This command does not take in effect of multiple server connections and might actually break other server connections)  /nick <nickname>  - Sets a nickname.",
+            "text": "/join <#channel>  - Joins channel  /leave <#channel>  - Leaves channel (if already joined)  /switch <#channel>  - Switches to channel  /reset  - Resets server token and relogins to the server  /newkeys  - Resets the RSA keypair ( Note:  This command does not take in effect of multiple server connections and might actually break other server connections)  /nick <nickname>  - Sets a nickname.  /whisper <user id> <message>  - Sends a private message",
             "title": "Client Commands"
         },
         {
