@@ -1,124 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="Riddlet Docs" />
+  </head>
+  <body class="">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+          <a class="navbar-brand" href="#">
+  <img src="/logo.786543bd.png" height="50" />
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse collapse w-100" id="navbarSupportedContent">
+    
+    <ul class="navbar-nav ml-auto w-100 justify-content-end">
+    
         
+            <li class="nav-item ">
+                <a class="nav-link" href="..">Home</a>
+            </li>
         
+    
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>First Server - Riddlet Docs</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="..">Riddlet Docs</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li >
-                        <a href="..">Home</a>
-                    </li>
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Server <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../install/">Server Installation</a>
-</li>
-                            
-<li class="active">
-    <a href="./">First Server</a>
-</li>
-                            
-<li >
-    <a href="../config/">Configuration</a>
-</li>
-                            
-<li >
-    <a href="../adapters/">Creating an adapter</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../bots/">Riddlet Bots</a>
-</li>
-                            
-<li >
-    <a href="../client-commands/">Web Client Commands</a>
-</li>
-                        </ul>
-                    </li>
-                    <li >
-                        <a href="../object-refrence/">Object Refrence</a>
-                    </li>
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                    <li >
-                        <a rel="next" href="../install/">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../config/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#your-first-riddlet-server">Your first Riddlet Server</a></li>
-            <li><a href="#standalone">Standalone</a></li>
-            <li><a href="#custom-https-server">Custom HTTP/S server</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Server
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                        <a class="dropdown-item " href="../install/">Server Installation</a>
+                
+                        <a class="dropdown-item active" href="./">First Server</a>
+                
+                        <a class="dropdown-item " href="../config/">Configuration</a>
+                
+                        <a class="dropdown-item " href="../adapters/">Creating an adapter</a>
+                
+                </div>
+            </li>
+        
+    
+        
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Clients
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                        <a class="dropdown-item " href="../bots/">Riddlet Bots</a>
+                
+                        <a class="dropdown-item " href="../client-commands/">Web Client Commands</a>
+                
+                </div>
+            </li>
+        
+    
+        
+            <li class="nav-item ">
+                <a class="nav-link" href="../object-refrence/">Object Refrence</a>
+            </li>
+        
+    
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
 
-<h1 id="your-first-riddlet-server">Your first Riddlet Server</h1>
+  </div>
+  </div>
+</nav>
+<div class="container container-main">
+    <div class="col-xs-12 col-md-12">
+        <h1 id="your-first-riddlet-server">Your first Riddlet Server</h1>
 <h2 id="standalone">Standalone</h2>
 <p>Starting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.</p>
 <pre><code class="js">var riddlet = require(&quot;riddlet-server&quot;).Riddlet()
@@ -138,82 +95,19 @@ app.listen(port);
 console.log(&quot;http listening on port &quot;, port);
 </code></pre>
 
-<p>Make sure that the current directory of your <code>js</code> file can be written to and read from. This is necessary for any version above <code>v0.10.6</code></p></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>var base_url = '..';</script>
-        <script src="../js/base.js"></script>
-        <script src="../search/require.js"></script>
-        <script src="../search/search.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&larr;</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&rarr;</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+<p>Make sure that the current directory of your <code>js</code> file can be written to and read from. This is necessary for any version above <code>v0.10.6</code></p>
     </div>
 </div>
-
-
-    </body>
+<footer class="footer">
+      <div class="container">
+        <span class="text-muted" style="transform: translate(50%, 0%);">&copy 2018 afroraydude</span>
+      </div>
+    </footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css" integrity="sha256-pGKGVYg0CCu2p4i5hjPUNcSvJ9St699+yKPlYWAyXKg=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
 </html>

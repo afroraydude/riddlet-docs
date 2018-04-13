@@ -1,168 +1,168 @@
 {
     "docs": [
         {
-            "location": "/",
-            "text": "Riddlet is a custom wrapper for Socket.IO that allows for anonymous chat between users.\n\n\nThere are two different parts:\n\n\nThe Server\n\n\nThe server software, titled \nriddlet-server\n is what handles everything to do with server operations like authentication, message handling, and custom software.\n\n\nThe client\n\n\nThe client can be a bot, web client, or mobile client.",
+            "location": "/", 
+            "text": "Riddlet is a custom wrapper for Socket.IO that allows for anonymous chat between users.\n\n\nThere are two different parts:\n\n\nThe Server\n\n\nThe server software, titled \nriddlet-server\n is what handles everything to do with server operations like authentication, message handling, and custom software.\n\n\nThe client\n\n\nThe client can be a bot, web client, or mobile client.", 
             "title": "Home"
-        },
+        }, 
         {
-            "location": "/#the-server",
-            "text": "The server software, titled  riddlet-server  is what handles everything to do with server operations like authentication, message handling, and custom software.",
+            "location": "/#the-server", 
+            "text": "The server software, titled  riddlet-server  is what handles everything to do with server operations like authentication, message handling, and custom software.", 
             "title": "The Server"
-        },
+        }, 
         {
-            "location": "/#the-client",
-            "text": "The client can be a bot, web client, or mobile client.",
+            "location": "/#the-client", 
+            "text": "The client can be a bot, web client, or mobile client.", 
             "title": "The client"
-        },
+        }, 
         {
-            "location": "/install/",
-            "text": "Installation\n\n\nInstalling \nriddlet-server\n is very simplistic.\n\n\n\n\nDownload the latest version of Node.js and NPM\n\n\nInstall a C++11 compiler. For linux, something like \nmake\n. For Windows, \nnpm install -g windows-build-tools\n should work.\n\n\nRun \nnpm install --save riddlet-server",
+            "location": "/install/", 
+            "text": "Installation\n\n\nInstalling \nriddlet-server\n is very simplistic.\n\n\n\n\nDownload the latest version of Node.js and NPM\n\n\nInstall a C++11 compiler. For linux, something like \nmake\n. For Windows, \nnpm install -g windows-build-tools\n should work.\n\n\nRun \nnpm install --save riddlet-server", 
             "title": "Server Installation"
-        },
+        }, 
         {
-            "location": "/install/#installation",
-            "text": "Installing  riddlet-server  is very simplistic.   Download the latest version of Node.js and NPM  Install a C++11 compiler. For linux, something like  make . For Windows,  npm install -g windows-build-tools  should work.  Run  npm install --save riddlet-server",
+            "location": "/install/#installation", 
+            "text": "Installing  riddlet-server  is very simplistic.   Download the latest version of Node.js and NPM  Install a C++11 compiler. For linux, something like  make . For Windows,  npm install -g windows-build-tools  should work.  Run  npm install --save riddlet-server", 
             "title": "Installation"
-        },
+        }, 
         {
-            "location": "/start/",
-            "text": "Your first Riddlet Server\n\n\nStandalone\n\n\nStarting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.\n\n\nvar riddlet = require(\"riddlet-server\").Riddlet()\n\n\n\n\nThen in your terminal, run \nnode server.js\n and Riddlet will run on either your \nport\n environment variable or port 8000.\n\n\nCustom HTTP/S server\n\n\nIf you want to attach it to an already existing HTTP server, just attach it.\n\n\nvar http = require('http');\n\napp = http.createServer();\n\nvar riddlet = require(\"riddlet-server\").Riddlet(app)\n\nconst port = process.env.port || 8080;\napp.listen(port);\nconsole.log(\"http listening on port \", port);\n\n\n\n\nMake sure that the current directory of your \njs\n file can be written to and read from. This is necessary for any version above \nv0.10.6",
+            "location": "/start/", 
+            "text": "Your first Riddlet Server\n\n\nStandalone\n\n\nStarting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.\n\n\nvar riddlet = require(\nriddlet-server\n).Riddlet()\n\n\n\n\nThen in your terminal, run \nnode server.js\n and Riddlet will run on either your \nport\n environment variable or port 8000.\n\n\nCustom HTTP/S server\n\n\nIf you want to attach it to an already existing HTTP server, just attach it.\n\n\nvar http = require('http');\n\napp = http.createServer();\n\nvar riddlet = require(\nriddlet-server\n).Riddlet(app)\n\nconst port = process.env.port || 8080;\napp.listen(port);\nconsole.log(\nhttp listening on port \n, port);\n\n\n\n\nMake sure that the current directory of your \njs\n file can be written to and read from. This is necessary for any version above \nv0.10.6", 
             "title": "First Server"
-        },
+        }, 
         {
-            "location": "/start/#your-first-riddlet-server",
-            "text": "",
+            "location": "/start/#your-first-riddlet-server", 
+            "text": "", 
             "title": "Your first Riddlet Server"
-        },
+        }, 
         {
-            "location": "/start/#standalone",
-            "text": "Starting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.  var riddlet = require(\"riddlet-server\").Riddlet()  Then in your terminal, run  node server.js  and Riddlet will run on either your  port  environment variable or port 8000.",
+            "location": "/start/#standalone", 
+            "text": "Starting up your first Riddlet Server is simple. You actually only need to place one line inside of your server.js file.  var riddlet = require( riddlet-server ).Riddlet()  Then in your terminal, run  node server.js  and Riddlet will run on either your  port  environment variable or port 8000.", 
             "title": "Standalone"
-        },
+        }, 
         {
-            "location": "/start/#custom-https-server",
-            "text": "If you want to attach it to an already existing HTTP server, just attach it.  var http = require('http');\n\napp = http.createServer();\n\nvar riddlet = require(\"riddlet-server\").Riddlet(app)\n\nconst port = process.env.port || 8080;\napp.listen(port);\nconsole.log(\"http listening on port \", port);  Make sure that the current directory of your  js  file can be written to and read from. This is necessary for any version above  v0.10.6",
+            "location": "/start/#custom-https-server", 
+            "text": "If you want to attach it to an already existing HTTP server, just attach it.  var http = require('http');\n\napp = http.createServer();\n\nvar riddlet = require( riddlet-server ).Riddlet(app)\n\nconst port = process.env.port || 8080;\napp.listen(port);\nconsole.log( http listening on port  , port);  Make sure that the current directory of your  js  file can be written to and read from. This is necessary for any version above  v0.10.6", 
             "title": "Custom HTTP/S server"
-        },
+        }, 
         {
-            "location": "/config/",
-            "text": "Configuration\n\n\nRiddlet handles custom configurations through environment variables. \n\n\nConfiguration Parameters\n\n\njwtcode\n: The passcode used for signing JWT tokens. Set this if you don't want users to get new tokens on each server reboot (default: 15)\n\n\nriddlettitle\n: The title of the server, used in the \"Join Server\" window of the client apps (default: Test Server)\n\n\nmaxcharlen\n: The maximum amount of characters allowed in a message (after decryption) (default: 500)\n\n\nlogo\n: The server's logo, used in the \"Join Server\" window of the client apps (default: https://d30y9cdsu7xlg0.cloudfront.net/png/29558-200.png)\n\n\nencrypt\n: Set this to anything but \"true\" if you want to disable OTR-like message handling (default: true)",
+            "location": "/config/", 
+            "text": "Configuration\n\n\nRiddlet handles custom configurations through environment variables. \n\n\nConfiguration Parameters\n\n\njwtcode\n: The passcode used for signing JWT tokens. Set this if you don't want users to get new tokens on each server reboot (default: 15)\n\n\nriddlettitle\n: The title of the server, used in the \"Join Server\" window of the client apps (default: Test Server)\n\n\nmaxcharlen\n: The maximum amount of characters allowed in a message (after decryption) (default: 500)\n\n\nlogo\n: The server's logo, used in the \"Join Server\" window of the client apps (default: https://d30y9cdsu7xlg0.cloudfront.net/png/29558-200.png)\n\n\nencrypt\n: Set this to anything but \"true\" if you want to disable OTR-like message handling (default: true)", 
             "title": "Configuration"
-        },
+        }, 
         {
-            "location": "/config/#configuration",
-            "text": "Riddlet handles custom configurations through environment variables.",
+            "location": "/config/#configuration", 
+            "text": "Riddlet handles custom configurations through environment variables.", 
             "title": "Configuration"
-        },
+        }, 
         {
-            "location": "/config/#configuration-parameters",
-            "text": "jwtcode : The passcode used for signing JWT tokens. Set this if you don't want users to get new tokens on each server reboot (default: 15)  riddlettitle : The title of the server, used in the \"Join Server\" window of the client apps (default: Test Server)  maxcharlen : The maximum amount of characters allowed in a message (after decryption) (default: 500)  logo : The server's logo, used in the \"Join Server\" window of the client apps (default: https://d30y9cdsu7xlg0.cloudfront.net/png/29558-200.png)  encrypt : Set this to anything but \"true\" if you want to disable OTR-like message handling (default: true)",
+            "location": "/config/#configuration-parameters", 
+            "text": "jwtcode : The passcode used for signing JWT tokens. Set this if you don't want users to get new tokens on each server reboot (default: 15)  riddlettitle : The title of the server, used in the \"Join Server\" window of the client apps (default: Test Server)  maxcharlen : The maximum amount of characters allowed in a message (after decryption) (default: 500)  logo : The server's logo, used in the \"Join Server\" window of the client apps (default: https://d30y9cdsu7xlg0.cloudfront.net/png/29558-200.png)  encrypt : Set this to anything but \"true\" if you want to disable OTR-like message handling (default: true)", 
             "title": "Configuration Parameters"
-        },
+        }, 
         {
-            "location": "/adapters/",
-            "text": "Adapters\n\n\nWhat is an \"Adapter\"?\n\n\nAdapters are extensions for Riddlet Server. They can be objects with functions or classes with functions. Adapters allow you to handle messages on your own.\n\n\nThe functions of an Adapter\n\n\nAll adapter functions\n\n\nAll adapter functions recieve specific parameters. They are as follows:\n\n\n\n\nio\n: The inner socket.io object, use for anything with the server-side of message handling (sending messages, rooms, sockets) (object)\n\n\nsocket\n: The socket the message came from (object)\n\n\nmessage\n: The message in question (object)\n\n\nmessages\n: the last messages sent (array of \nmessage\n)\n\n\nserverInfo\n: The server's public info (object)\n\n\nuser\n: The user's token, decoded (object)\n\n\n\n\nbeforeMessage()\n\n\nThis is ran before the normal message handler is loaded. If you wanted to handle custom commands, socket attributes, or otherwise modify any of the parameters, you would do it in this function.\n\n\nafterMessage()\n\n\nThis is ran right after the default message handler. If you wanted to keep messages for long term storage, you would probably handle that within this function.",
+            "location": "/adapters/", 
+            "text": "Adapters\n\n\nWhat is an \"Adapter\"?\n\n\nAdapters are extensions for Riddlet Server. They can be objects with functions or classes with functions. Adapters allow you to handle messages on your own.\n\n\nThe functions of an Adapter\n\n\nAll adapter functions\n\n\nAll adapter functions recieve specific parameters. They are as follows:\n\n\n\n\nio\n: The inner socket.io object, use for anything with the server-side of message handling (sending messages, rooms, sockets) (object)\n\n\nsocket\n: The socket the message came from (object)\n\n\nmessage\n: The message in question (object)\n\n\nmessages\n: the last messages sent (array of \nmessage\n)\n\n\nserverInfo\n: The server's public info (object)\n\n\nuser\n: The user's token, decoded (object)\n\n\n\n\nbeforeMessage()\n\n\nThis is ran before the normal message handler is loaded. If you wanted to handle custom commands, socket attributes, or otherwise modify any of the parameters, you would do it in this function.\n\n\nafterMessage()\n\n\nThis is ran right after the default message handler. If you wanted to keep messages for long term storage, you would probably handle that within this function.", 
             "title": "Creating an adapter"
-        },
+        }, 
         {
-            "location": "/adapters/#adapters",
-            "text": "",
+            "location": "/adapters/#adapters", 
+            "text": "", 
             "title": "Adapters"
-        },
+        }, 
         {
-            "location": "/adapters/#what-is-an-adapter",
-            "text": "Adapters are extensions for Riddlet Server. They can be objects with functions or classes with functions. Adapters allow you to handle messages on your own.",
+            "location": "/adapters/#what-is-an-adapter", 
+            "text": "Adapters are extensions for Riddlet Server. They can be objects with functions or classes with functions. Adapters allow you to handle messages on your own.", 
             "title": "What is an \"Adapter\"?"
-        },
+        }, 
         {
-            "location": "/adapters/#the-functions-of-an-adapter",
-            "text": "",
+            "location": "/adapters/#the-functions-of-an-adapter", 
+            "text": "", 
             "title": "The functions of an Adapter"
-        },
+        }, 
         {
-            "location": "/adapters/#all-adapter-functions",
-            "text": "All adapter functions recieve specific parameters. They are as follows:   io : The inner socket.io object, use for anything with the server-side of message handling (sending messages, rooms, sockets) (object)  socket : The socket the message came from (object)  message : The message in question (object)  messages : the last messages sent (array of  message )  serverInfo : The server's public info (object)  user : The user's token, decoded (object)",
+            "location": "/adapters/#all-adapter-functions", 
+            "text": "All adapter functions recieve specific parameters. They are as follows:   io : The inner socket.io object, use for anything with the server-side of message handling (sending messages, rooms, sockets) (object)  socket : The socket the message came from (object)  message : The message in question (object)  messages : the last messages sent (array of  message )  serverInfo : The server's public info (object)  user : The user's token, decoded (object)", 
             "title": "All adapter functions"
-        },
+        }, 
         {
-            "location": "/adapters/#beforemessage",
-            "text": "This is ran before the normal message handler is loaded. If you wanted to handle custom commands, socket attributes, or otherwise modify any of the parameters, you would do it in this function.",
+            "location": "/adapters/#beforemessage", 
+            "text": "This is ran before the normal message handler is loaded. If you wanted to handle custom commands, socket attributes, or otherwise modify any of the parameters, you would do it in this function.", 
             "title": "beforeMessage()"
-        },
+        }, 
         {
-            "location": "/adapters/#aftermessage",
-            "text": "This is ran right after the default message handler. If you wanted to keep messages for long term storage, you would probably handle that within this function.",
+            "location": "/adapters/#aftermessage", 
+            "text": "This is ran right after the default message handler. If you wanted to keep messages for long term storage, you would probably handle that within this function.", 
             "title": "afterMessage()"
-        },
+        }, 
         {
-            "location": "/bots/",
-            "text": "Riddlet Bots\n\n\nRiddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server. \n\n\nInstalling the official bot library\n\n\nInstallation is fairly simple. Just run \nnpm install --save riddlet-bot\n in your project directory.\n\n\nYour first bot\n\n\nThe official bot library allows for very barebones bot creation.\n\n\nSimple Log Bot\n\n\nTo create a bot, you first want to create a new \nRiddletBot\n class.\n\n\nvar RiddletBot = require('riddlet-bot').RiddletBot\n\nvar bot = new RiddletBot(\"http://chat.example.com\")\n\n\n\n\nYou should know if if this works when you get a token printed to your terminal. (ie: \nxxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\n)\n\n\nWe now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.\n\n\nvar bot = new RiddletBot(\"http://chat.example.com\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\")\n\n\n\n\nYour bot should now log every message it recieves from the server. \n\n\nCustom Message Handler\n\n\nNow to create a custom Message Handler.\n\n\nHere is an example message handler that we will be using.\n\n\nvar xMessageHandler = function (bot, message) {\n  if(message.data === \"!info\") {\n    bot.SendMessage(\"test\", \"#all\")\n  }\n}\n\n\n\n\nLets go line by line as to each part of the Message Handler\n\n\nvar xMessageHandler = function (bot, message)\n\n\n\n\nThis line defines the message handler. The \nbot\n parameter is the \nRiddletBot\n object that we defined. The \nmessage\n parameter is a \nmessage\n object.\n\n\nif(message.data === \"!info\")\n\n\n\n\nThis checks to see if the message's text is equal to \"!info\" (ie: the user sent the mesesage \"!info\")\n\n\nbot.SendMessage(\"test\", \"#all\")\n\n\n\n\nThis sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the \nmessage\n that you want to send (equivalent to \nmessage.data\n) and the second parameter is the room you want it to go. \n\n\nNow we want to import it into our bot.\n\n\nvar bot = new RiddletBot(\"http://chat.example.com\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\", xMessageHandler)\n\n\n\n\nAnd that's your first bot!",
+            "location": "/bots/", 
+            "text": "Riddlet Bots\n\n\nRiddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server. \n\n\nInstalling the official bot library\n\n\nInstallation is fairly simple. Just run \nnpm install --save riddlet-bot\n in your project directory.\n\n\nYour first bot\n\n\nThe official bot library allows for very barebones bot creation.\n\n\nSimple Log Bot\n\n\nTo create a bot, you first want to create a new \nRiddletBot\n class.\n\n\nvar RiddletBot = require('riddlet-bot').RiddletBot\n\nvar bot = new RiddletBot(\nhttp://chat.example.com\n)\n\n\n\n\nYou should know if if this works when you get a token printed to your terminal. (ie: \nxxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\n)\n\n\nWe now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.\n\n\nvar bot = new RiddletBot(\nhttp://chat.example.com\n, \nxxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\n)\n\n\n\n\nYour bot should now log every message it recieves from the server. \n\n\nCustom Message Handler\n\n\nNow to create a custom Message Handler.\n\n\nHere is an example message handler that we will be using.\n\n\nvar xMessageHandler = function (bot, message) {\n  if(message.data === \n!info\n) {\n    bot.SendMessage(\ntest\n, \n#all\n)\n  }\n}\n\n\n\n\nLets go line by line as to each part of the Message Handler\n\n\nvar xMessageHandler = function (bot, message)\n\n\n\n\nThis line defines the message handler. The \nbot\n parameter is the \nRiddletBot\n object that we defined. The \nmessage\n parameter is a \nmessage\n object.\n\n\nif(message.data === \n!info\n)\n\n\n\n\nThis checks to see if the message's text is equal to \"!info\" (ie: the user sent the mesesage \"!info\")\n\n\nbot.SendMessage(\ntest\n, \n#all\n)\n\n\n\n\nThis sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the \nmessage\n that you want to send (equivalent to \nmessage.data\n) and the second parameter is the room you want it to go. \n\n\nNow we want to import it into our bot.\n\n\nvar bot = new RiddletBot(\nhttp://chat.example.com\n, \nxxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\n, xMessageHandler)\n\n\n\n\nAnd that's your first bot!", 
             "title": "Riddlet Bots"
-        },
+        }, 
         {
-            "location": "/bots/#riddlet-bots",
-            "text": "Riddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server.",
+            "location": "/bots/#riddlet-bots", 
+            "text": "Riddlet Bots are chat programs that use the Riddlet functions to send and recieve messages on a given server.", 
             "title": "Riddlet Bots"
-        },
+        }, 
         {
-            "location": "/bots/#installing-the-official-bot-library",
-            "text": "Installation is fairly simple. Just run  npm install --save riddlet-bot  in your project directory.",
+            "location": "/bots/#installing-the-official-bot-library", 
+            "text": "Installation is fairly simple. Just run  npm install --save riddlet-bot  in your project directory.", 
             "title": "Installing the official bot library"
-        },
+        }, 
         {
-            "location": "/bots/#your-first-bot",
-            "text": "The official bot library allows for very barebones bot creation.",
+            "location": "/bots/#your-first-bot", 
+            "text": "The official bot library allows for very barebones bot creation.", 
             "title": "Your first bot"
-        },
+        }, 
         {
-            "location": "/bots/#simple-log-bot",
-            "text": "To create a bot, you first want to create a new  RiddletBot  class.  var RiddletBot = require('riddlet-bot').RiddletBot\n\nvar bot = new RiddletBot(\"http://chat.example.com\")  You should know if if this works when you get a token printed to your terminal. (ie:  xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz )  We now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.  var bot = new RiddletBot(\"http://chat.example.com\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\")  Your bot should now log every message it recieves from the server.",
+            "location": "/bots/#simple-log-bot", 
+            "text": "To create a bot, you first want to create a new  RiddletBot  class.  var RiddletBot = require('riddlet-bot').RiddletBot\n\nvar bot = new RiddletBot( http://chat.example.com )  You should know if if this works when you get a token printed to your terminal. (ie:  xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz )  We now want to stop the bot process and put that token as a second parameter. This allows our bot to have the same token each time it connects to the server.  var bot = new RiddletBot( http://chat.example.com ,  xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz )  Your bot should now log every message it recieves from the server.", 
             "title": "Simple Log Bot"
-        },
+        }, 
         {
-            "location": "/bots/#custom-message-handler",
-            "text": "Now to create a custom Message Handler.  Here is an example message handler that we will be using.  var xMessageHandler = function (bot, message) {\n  if(message.data === \"!info\") {\n    bot.SendMessage(\"test\", \"#all\")\n  }\n}  Lets go line by line as to each part of the Message Handler  var xMessageHandler = function (bot, message)  This line defines the message handler. The  bot  parameter is the  RiddletBot  object that we defined. The  message  parameter is a  message  object.  if(message.data === \"!info\")  This checks to see if the message's text is equal to \"!info\" (ie: the user sent the mesesage \"!info\")  bot.SendMessage(\"test\", \"#all\")  This sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the  message  that you want to send (equivalent to  message.data ) and the second parameter is the room you want it to go.   Now we want to import it into our bot.  var bot = new RiddletBot(\"http://chat.example.com\", \"xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz\", xMessageHandler)  And that's your first bot!",
+            "location": "/bots/#custom-message-handler", 
+            "text": "Now to create a custom Message Handler.  Here is an example message handler that we will be using.  var xMessageHandler = function (bot, message) {\n  if(message.data ===  !info ) {\n    bot.SendMessage( test ,  #all )\n  }\n}  Lets go line by line as to each part of the Message Handler  var xMessageHandler = function (bot, message)  This line defines the message handler. The  bot  parameter is the  RiddletBot  object that we defined. The  message  parameter is a  message  object.  if(message.data ===  !info )  This checks to see if the message's text is equal to \"!info\" (ie: the user sent the mesesage \"!info\")  bot.SendMessage( test ,  #all )  This sends a message, and does all necessary compatibility checks with the server for you. The first parameter is the  message  that you want to send (equivalent to  message.data ) and the second parameter is the room you want it to go.   Now we want to import it into our bot.  var bot = new RiddletBot( http://chat.example.com ,  xxxxxxxxxxxxx.yyyyyyyyyyyy.zzzzzzzzzzzz , xMessageHandler)  And that's your first bot!", 
             "title": "Custom Message Handler"
-        },
+        }, 
         {
-            "location": "/client-commands/",
-            "text": "Client Commands\n\n\n/join <#channel>\n - Joins channel\n\n\n/leave <#channel>\n - Leaves channel (if already joined)\n\n\n/switch <#channel>\n - Switches to channel\n\n\n/reset\n - Resets server token and relogins to the server\n\n\n/newkeys\n - Resets the RSA keypair (\nNote:\n This command does not take in effect of multiple server connections and might actually break other server connections)\n\n\n/nick <nickname>\n - Sets a nickname.\n\n\n/whisper <user id> <message>\n - Sends a private message",
+            "location": "/client-commands/", 
+            "text": "Client Commands\n\n\n/join \n#channel\n - Joins channel\n\n\n/leave \n#channel\n - Leaves channel (if already joined)\n\n\n/switch \n#channel\n - Switches to channel\n\n\n/reset\n - Resets server token and relogins to the server\n\n\n/newkeys\n - Resets the RSA keypair (\nNote:\n This command does not take in effect of multiple server connections and might actually break other server connections)\n\n\n/nick \nnickname\n - Sets a nickname.\n\n\n/dark\n - Dark theme\n\n\n/light\n - Light theme\n\n\n/setimg \nimage url\n - Sets avatar\n\n\n/clear\n - Clears message", 
             "title": "Web Client Commands"
-        },
+        }, 
         {
-            "location": "/client-commands/#client-commands",
-            "text": "/join <#channel>  - Joins channel  /leave <#channel>  - Leaves channel (if already joined)  /switch <#channel>  - Switches to channel  /reset  - Resets server token and relogins to the server  /newkeys  - Resets the RSA keypair ( Note:  This command does not take in effect of multiple server connections and might actually break other server connections)  /nick <nickname>  - Sets a nickname.  /whisper <user id> <message>  - Sends a private message",
+            "location": "/client-commands/#client-commands", 
+            "text": "/join  #channel  - Joins channel  /leave  #channel  - Leaves channel (if already joined)  /switch  #channel  - Switches to channel  /reset  - Resets server token and relogins to the server  /newkeys  - Resets the RSA keypair ( Note:  This command does not take in effect of multiple server connections and might actually break other server connections)  /nick  nickname  - Sets a nickname.  /dark  - Dark theme  /light  - Light theme  /setimg  image url  - Sets avatar  /clear  - Clears message", 
             "title": "Client Commands"
-        },
+        }, 
         {
-            "location": "/object-refrence/",
-            "text": "Object Refrence\n\n\nSocket.io objects\n\n\nThe socket.io objects \nio\n and \nsocket\n are mostly unmodified from their original socket.io object. You can find information on these objects on the \nsocket.io docs\n\n\nmessage\n Object\n\n\nMessage objects are the go-to for any socket transmission that isn't already custom defined.\n\n\nExample \nmesssage\n object:\n\n\n{\n  \"data\":\"hello\",\n  \"id\":\"152255174502021051\",\n  \"room\":\"#default\",\n  \"client\":\"username15chars\",\n  \"color\":\"coral\",\n  \"nickname\": \"john doe\"\n}\n\n\n\n\ndata\n: The message data. Plain text message is usually what the user typed in.\n\n\nid\n: Custom ID of message based on UNIX timestamp plus some extra numbers added for good measure\n\n\nroom\n: The room the message is supposed to go to.\n\n\nclient\n: The client's custom name.\n\n\ncolor\n: The user's color (used for the text 'Anonymous' on the web app)\n\n\nnickname\n: The nickname chosen by the client\n\n\nserverInfo\n Object\n\n\nThis object is sent time a user connects to the server.\n\n\nExample \nserverInfo\n object:\n\n\n{\n  \"title\": \"Test Server\",\n  \"rooms\": [\"/\"],\n  \"maxcharlen\": 500,\n  \"ip\": \"123.456.789.0\",\n  \"isMod\":false,\n  \"logo\":\"https://example.com/logo.png\",\n  \"version\":12.3\n}\n\n\n\n\nversion\n: The minimum client version to use the server.\n\n\ntitle\n: The server's name\n\n\nrooms\n: The namespace (for socket.io)\n\n\nmaxcharlen\n: The maximum characters that can be in a message\n\n\nip\n: The public IP of the server\n\n\nisMod\n: True if the server uses adapters\n\n\nlogo\n: The logo of the server\n\n\nuser\n Object\n\n\nThis contains all of the user's information necessary for viewing messages.\n\n\nExample \nuser\n object:\n\n\n{\n  \"name\": \"92wM66tMWxd6l0I\",\n  \"color\": \"purple\",\n  \"nickname\": \"john doe\"\n}\n\n\n\n\nname\n: Equivalent of the \nclient\n variable in a message object.\n\n\ncolor\n: Equivalent of the \ncolor\n variable in a message object.\n\n\nnickname\n: The nickname chosen by the client",
+            "location": "/object-refrence/", 
+            "text": "Object Refrence\n\n\nSocket.io objects\n\n\nThe socket.io objects \nio\n and \nsocket\n are mostly unmodified from their original socket.io object. You can find information on these objects on the \nsocket.io docs\n\n\nmessage\n Object\n\n\nMessage objects are the go-to for any socket transmission that isn't already custom defined.\n\n\nExample \nmesssage\n object:\n\n\n{\n  \ndata\n:\nhello\n,\n  \nid\n:\n152255174502021051\n,\n  \nroom\n:\n#default\n,\n  \nclient\n:\nusername15chars\n,\n  \ncolor\n:\ncoral\n,\n  \nnickname\n: \njohn doe\n\n}\n\n\n\n\ndata\n: The message data. Plain text message is usually what the user typed in.\n\n\nid\n: Custom ID of message based on UNIX timestamp plus some extra numbers added for good measure\n\n\nroom\n: The room the message is supposed to go to.\n\n\nclient\n: The client's custom name.\n\n\ncolor\n: The user's color (used for the text 'Anonymous' on the web app)\n\n\nnickname\n: The nickname chosen by the client\n\n\nserverInfo\n Object\n\n\nThis object is sent time a user connects to the server.\n\n\nExample \nserverInfo\n object:\n\n\n{\n  \ntitle\n: \nTest Server\n,\n  \nrooms\n: [\n/\n],\n  \nmaxcharlen\n: 500,\n  \nip\n: \n123.456.789.0\n,\n  \nisMod\n:false,\n  \nlogo\n:\nhttps://example.com/logo.png\n,\n  \nversion\n:12.3\n}\n\n\n\n\nversion\n: The minimum client version to use the server.\n\n\ntitle\n: The server's name\n\n\nrooms\n: The namespace (for socket.io)\n\n\nmaxcharlen\n: The maximum characters that can be in a message\n\n\nip\n: The public IP of the server\n\n\nisMod\n: True if the server uses adapters\n\n\nlogo\n: The logo of the server\n\n\nuser\n Object\n\n\nThis contains all of the user's information necessary for viewing messages.\n\n\nExample \nuser\n object:\n\n\n{\n  \nname\n: \n92wM66tMWxd6l0I\n,\n  \ncolor\n: \npurple\n,\n  \nnickname\n: \njohn doe\n\n}\n\n\n\n\nname\n: Equivalent of the \nclient\n variable in a message object.\n\n\ncolor\n: Equivalent of the \ncolor\n variable in a message object.\n\n\nnickname\n: The nickname chosen by the client", 
             "title": "Object Refrence"
-        },
+        }, 
         {
-            "location": "/object-refrence/#object-refrence",
-            "text": "",
+            "location": "/object-refrence/#object-refrence", 
+            "text": "", 
             "title": "Object Refrence"
-        },
+        }, 
         {
-            "location": "/object-refrence/#socketio-objects",
-            "text": "The socket.io objects  io  and  socket  are mostly unmodified from their original socket.io object. You can find information on these objects on the  socket.io docs",
+            "location": "/object-refrence/#socketio-objects", 
+            "text": "The socket.io objects  io  and  socket  are mostly unmodified from their original socket.io object. You can find information on these objects on the  socket.io docs", 
             "title": "Socket.io objects"
-        },
+        }, 
         {
-            "location": "/object-refrence/#message-object",
-            "text": "Message objects are the go-to for any socket transmission that isn't already custom defined.  Example  messsage  object:  {\n  \"data\":\"hello\",\n  \"id\":\"152255174502021051\",\n  \"room\":\"#default\",\n  \"client\":\"username15chars\",\n  \"color\":\"coral\",\n  \"nickname\": \"john doe\"\n}  data : The message data. Plain text message is usually what the user typed in.  id : Custom ID of message based on UNIX timestamp plus some extra numbers added for good measure  room : The room the message is supposed to go to.  client : The client's custom name.  color : The user's color (used for the text 'Anonymous' on the web app)  nickname : The nickname chosen by the client",
+            "location": "/object-refrence/#message-object", 
+            "text": "Message objects are the go-to for any socket transmission that isn't already custom defined.  Example  messsage  object:  {\n   data : hello ,\n   id : 152255174502021051 ,\n   room : #default ,\n   client : username15chars ,\n   color : coral ,\n   nickname :  john doe \n}  data : The message data. Plain text message is usually what the user typed in.  id : Custom ID of message based on UNIX timestamp plus some extra numbers added for good measure  room : The room the message is supposed to go to.  client : The client's custom name.  color : The user's color (used for the text 'Anonymous' on the web app)  nickname : The nickname chosen by the client", 
             "title": "message Object"
-        },
+        }, 
         {
-            "location": "/object-refrence/#serverinfo-object",
-            "text": "This object is sent time a user connects to the server.  Example  serverInfo  object:  {\n  \"title\": \"Test Server\",\n  \"rooms\": [\"/\"],\n  \"maxcharlen\": 500,\n  \"ip\": \"123.456.789.0\",\n  \"isMod\":false,\n  \"logo\":\"https://example.com/logo.png\",\n  \"version\":12.3\n}  version : The minimum client version to use the server.  title : The server's name  rooms : The namespace (for socket.io)  maxcharlen : The maximum characters that can be in a message  ip : The public IP of the server  isMod : True if the server uses adapters  logo : The logo of the server",
+            "location": "/object-refrence/#serverinfo-object", 
+            "text": "This object is sent time a user connects to the server.  Example  serverInfo  object:  {\n   title :  Test Server ,\n   rooms : [ / ],\n   maxcharlen : 500,\n   ip :  123.456.789.0 ,\n   isMod :false,\n   logo : https://example.com/logo.png ,\n   version :12.3\n}  version : The minimum client version to use the server.  title : The server's name  rooms : The namespace (for socket.io)  maxcharlen : The maximum characters that can be in a message  ip : The public IP of the server  isMod : True if the server uses adapters  logo : The logo of the server", 
             "title": "serverInfo Object"
-        },
+        }, 
         {
-            "location": "/object-refrence/#user-object",
-            "text": "This contains all of the user's information necessary for viewing messages.  Example  user  object:  {\n  \"name\": \"92wM66tMWxd6l0I\",\n  \"color\": \"purple\",\n  \"nickname\": \"john doe\"\n}  name : Equivalent of the  client  variable in a message object.  color : Equivalent of the  color  variable in a message object.  nickname : The nickname chosen by the client",
+            "location": "/object-refrence/#user-object", 
+            "text": "This contains all of the user's information necessary for viewing messages.  Example  user  object:  {\n   name :  92wM66tMWxd6l0I ,\n   color :  purple ,\n   nickname :  john doe \n}  name : Equivalent of the  client  variable in a message object.  color : Equivalent of the  color  variable in a message object.  nickname : The nickname chosen by the client", 
             "title": "user Object"
         }
     ]
