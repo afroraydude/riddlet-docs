@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="Riddlet Docs" />
+  </head>
+  <body class="">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+          <a class="navbar-brand" href="#">
+  <img src="/logo.786543bd.png" height="50" />
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse collapse w-100" id="navbarSupportedContent">
+    {% if nav|length>1 %}
+    <ul class="navbar-nav ml-auto w-100 justify-content-end">
+    {% for nav_item in nav %}
+        {% if nav_item.children %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ nav_item.title }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% for nav_item in nav_item.children %}
+                        <a class="dropdown-item {% if nav_item.active%}active{%endif%}" href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                {% endfor %}
+                </div>
+            </li>
+        {% else %}
+            <li class="nav-item {% if nav_item.active%}active{%endif%}">
+                <a class="nav-link" href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endif %}
+  </div>
+  </div>
+</nav>
+<div class="container container-main">
+    <div class="col-xs-12 col-md-12">
+        {{ page.content }}
+    </div>
+</div>
+<footer class="footer">
+      <div class="container">
+        <span class="text-muted" style="transform: translate(50%, 0%);">&copy 2018 afroraydude</span>
+      </div>
+    </footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css" integrity="sha256-pGKGVYg0CCu2p4i5hjPUNcSvJ9St699+yKPlYWAyXKg=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>

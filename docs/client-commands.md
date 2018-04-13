@@ -11,3 +11,11 @@
 `/newkeys` - Resets the RSA keypair (***Note:*** This command does not take in effect of multiple server connections and might actually break other server connections)
 
 `/nick <nickname>` - Sets a nickname.
+
+`/dark` - Dark theme
+
+`/light` - Light theme
+
+`/setimg <image url>` - Sets avatar
+
+`/clear` - Clears message
